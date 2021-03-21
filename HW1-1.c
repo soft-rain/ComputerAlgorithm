@@ -100,15 +100,11 @@ void deleteNode(LinkedListType* L, int pos)
 		{
 			pre = pre->link;
 		}
-
 		removed = pre->link;
 		pre->link = removed->link;
 		free(removed);
 	}
-
 }
-
-
 
 void printList(LinkedListType* L)
 {
@@ -132,13 +128,10 @@ void main()
 	add(&list, 1, 50); printList(&list);
 	add(&list, 3, 60); printList(&list);
 	getchar();
-	printList(&list);
 	addLast(&list, 25); printList(&list);
 	deleteFirst(&list); printList(&list);
 	deleteFirst(&list); printList(&list);
-
 	getchar();
-	printList(&list);
 	deleteNode(&list, 2); printList(&list);
 	deleteNode(&list, 1); printList(&list);
 	deleteNode(&list, 0); printList(&list);
@@ -146,8 +139,8 @@ void main()
 
 
 	int pos;
-	printf("\nï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¯ï¿½Ò±ï¿½ï¿½?");
+	printf("\n¸î ¹ø ³ëµåÀÇ °ªÀ» ¹ÝÈ¯ÇÒ±î¿ä? ");
 	scanf("%d", &pos);
-	printf("%dï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ %d\n", pos, get(&list, pos));
+	printf("%d¹ø³ëµåÀÇ °ªÀº %d\n", pos, get(&list, pos));
 
 }
